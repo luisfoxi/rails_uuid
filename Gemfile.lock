@@ -60,9 +60,6 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
-    activeuuid (0.6.1)
-      activerecord (>= 3.1)
-      uuidtools
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     bindex (0.8.1)
@@ -104,6 +101,7 @@ GEM
     nio4r (2.5.4)
     nokogiri (1.11.1-x86-mingw32)
       racc (~> 1.4)
+    pg (1.2.3-x86-mingw32)
     public_suffix (4.0.6)
     puma (5.1.1)
       nio4r (~> 2.0)
@@ -162,7 +160,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -172,7 +169,6 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2020.6)
       tzinfo (>= 1.0.0)
-    uuidtools (2.2.0)
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -193,17 +189,16 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  activeuuid (~> 0.6.1)
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
   jbuilder (~> 2.7)
+  pg (~> 1.1)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.0)
   sass-rails (>= 6)
   selenium-webdriver
-  sqlite3 (~> 1.4, >= 1.4.2)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
