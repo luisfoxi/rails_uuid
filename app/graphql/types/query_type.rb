@@ -14,10 +14,11 @@ module Types
     end
 
     field :all_posts, [PostType], null: false
-
-    # this method is invoked, when `all_link` fields is being resolved
+    # this method is invoked, when `all_posts` fields is being resolved
     def all_posts
       Post.all
     end 
+
+    field :post, resolver: Queries::Post
   end
 end
