@@ -1,5 +1,5 @@
 module Queries
-  class Post < Queries::BaseQuery
+  class FetchPost < Queries::BaseQuery
     type Types::PostType, null: false
     argument :id, ID, required: true
 

@@ -19,6 +19,6 @@ module Types
       Post.all
     end 
 
-    field :post, resolver: Queries::Post
+    field :fetch_post, resolver: Queries::FetchPost
   end
 end
