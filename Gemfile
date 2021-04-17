@@ -43,6 +43,8 @@ group :development do
 
   # GraphQL Server for development
   gem 'graphiql-rails', '~> 1.7'
+
+  gem 'graphql-rails-generators', '~> 1.1', '>= 1.1.1'
 end
 
 group :test do

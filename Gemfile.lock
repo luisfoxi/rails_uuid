@@ -86,6 +86,7 @@ GEM
       railties
       sprockets-rails
     graphql (1.12.8)
+    graphql-rails-generators (1.1.1)
     graphql_rails (1.2.3)
       activesupport (>= 4)
       graphql (~> 1.12, >= 1.12.4)
@@ -199,6 +200,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   graphiql-rails (~> 1.7)
   graphql (~> 1.12, >= 1.12.8)
+  graphql-rails-generators (~> 1.1, >= 1.1.1)
   graphql_rails (~> 1.2, >= 1.2.2)
   jbuilder (~> 2.7)
   pg (~> 1.2, >= 1.2.3)
