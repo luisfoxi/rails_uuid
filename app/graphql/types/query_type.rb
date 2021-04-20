@@ -13,12 +13,12 @@ module Types
       "Hello World!"
     end
 
-    field :all_posts, [PostType], null: false
+    field :posts, [PostType], null: false
     # this method is invoked, when `all_posts` fields is being resolved
-    def all_posts
+    def posts
       Post.all
     end 
 
-    field :fetch_post, resolver: Queries::FetchPost
+    field :post, resolver: Queries::FetchPost
   end
 end
