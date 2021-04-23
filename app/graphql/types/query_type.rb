@@ -1,5 +1,6 @@
 module Types
   class QueryType < Types::BaseObject
+		field :posts, resolver: Resolvers::PostSearch 
     # Add `node(id: ID!) and `nodes(ids: [ID!]!)`
     include GraphQL::Types::Relay::HasNodeField
 
@@ -13,11 +14,11 @@ module Types
       "Hello World!"
     end
 
-    field :posts, [PostType], null: false
-    # this method is invoked, when `all_posts` fields is being resolved
-    def posts
-      Post.all
-    end 
+    # field :posts, [PostType], null: false
+    # # this method is invoked, when `all_posts` fields is being resolved
+    # def posts
+    #   Post.all
+    # end 
 
     field :post, resolver: Queries::FetchPost
   end
