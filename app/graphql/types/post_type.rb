@@ -3,6 +3,10 @@ module Types
     field :id, ID, null: false
     field :title, String, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: true   # References: https://stackoverflow.com/questions/47960194/graphql-ruby-date-or-datetime-type
+    field :created_at, GraphQL::Types::ISO8601DateTime, null: true
+    field :created_at_part, String, null: true do
+      argument :part, String, required: false
+    end
     # field :created_at, String, null: false
     # field :created_at_part, Integer, null: true do
     #   argument :unit, Integer, required: false, default_value: 123
