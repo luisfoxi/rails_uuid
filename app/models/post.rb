@@ -1,20 +1,15 @@
 class Post < ApplicationRecord
   has_many :comments
   def created_at_part(**part)
-    puts part[:part]
     case part[:part]
     when 'day'
-      created_at.day
-      puts '1'
+      return created_at.day
     when 'month'
-      created_at.month
-      puts '2'
+      return created_at.month
     when 'year'
-      created_at.year
-      puts '3'
+      return created_at.year
     else
-      created_at.to_s
-      puts '4'
+      return created_at.to_s
     end
   end 
 end
