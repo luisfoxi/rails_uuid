@@ -2,7 +2,7 @@ module Mutations
   class CreatePost < Mutations::BaseMutation
     field :post, Types::PostType, null: true
 
-    argument :attributes, Types::Input::PostInput, required: true
+    argument :attributes, Types::Input::PostInput, required: false
 
     def resolve(attributes:)
       model = Post.new(attributes.to_h)

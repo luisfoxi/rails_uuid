@@ -2,13 +2,13 @@ module Mutations
   class UpdatePost < Mutations::BaseMutation
     field :post, Types::PostType, null: true
 
-    argument :id, Int, required: true
+    argument :id, String, required: true
     argument :attributes, Types::Input::PostInput, required: true
     
     def resolve(attributes:, id:)
       model = Post.find(id)
 
-      if model.update_attributes(attributes.to_h)
+      if model.update(attributes.to_h)
         {post: model}
       else
         model_errors!(model)
