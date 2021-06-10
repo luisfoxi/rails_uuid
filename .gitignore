@@ -29,7 +29,5 @@
 /config/master.key
 /config/database.yml
 /railsc.bat
-
-# Others
-*.BAK
 *.FXP
+*.BAK
