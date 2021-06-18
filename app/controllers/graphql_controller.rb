@@ -5,6 +5,16 @@ class GraphqlController < ApplicationController
   # protect_from_forgery with: :null_session
 
   def execute
+    # puts "================================================"
+    # puts params.to_json
+    # puts "================================================"
+    # request.headers.to_h.each do |k,v|
+    #   ['HTTP','CONTENT','REMOTE','REQUEST','AUTHORIZATION','SCRIPT','SERVER'].each do |s|
+    #     puts k.to_s + ' = ' + v.to_s if k.include? s
+    #   end
+    # end
+    # puts "================================================"
+    
     variables = prepare_variables(params[:variables])
     query = params[:query]
     operation_name = params[:operationName]
