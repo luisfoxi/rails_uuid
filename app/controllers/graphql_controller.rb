@@ -23,7 +23,12 @@ class GraphqlController < ApplicationController
       # current_user: current_user,
     }
     result = RailsUuidSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
-    render json: result
+    # render json: result
+    respond_to do |format| 
+      format.json { render :json => result } 
+      format.xml { render :xml => result } 
+      format.text { render :text => result.to_s } 
+    end 
   rescue => e
     raise e unless Rails.env.development?
     handle_error_in_development e

@@ -5,11 +5,13 @@ request = NEWOBJECT("Microsoft.XMLHTTP")
 body_text = utf8encode( 'query { posts { id title } }' )
 *WAIT WINDOW body_text
 
-url = 'http://localhost:3000/graphql.json'
+*url = 'http://localhost:3000/graphql.json'
+url = 'http://localhost:3000/graphql'
+*url = 'http://localhost:3000/graphql.xml'
 
 request.Open('POST', url, .T.)
 *request.setRequestHeader('Accept', 'application/json')
-request.setRequestHeader("Content-Type", 'application/x-www-form-urlencoded')
+*request.setRequestHeader("Content-Type", 'application/x-www-form-urlencoded')
 *request.setRequestHeader("Content-Disposition", 'form-data; name="query"; data="query")
 
 

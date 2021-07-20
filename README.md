@@ -22,3 +22,27 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## Usage:
+
+### Mutations
+~~~graphql
+mutation {
+  createPost(
+    input: {
+      attributes: {title: "fourth fifth"}
+    }
+  ) {
+    post {
+      id
+    }
+  }
+}
+~~~~
+
+### Queries
+~~~~graphql
+{posts {
+  id, title
+}}
+~~~~
