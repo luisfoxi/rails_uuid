@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   has_many :comments
+
   def created_at_part(**part)
     case part[:part]
     when 'day'

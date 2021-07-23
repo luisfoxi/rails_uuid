@@ -7,6 +7,8 @@ module Types
     field :created_at_part, String, null: true do
       argument :part, String, required: false
     end
+    field :comments, [Types::CommentType], null: true
+
     # field :created_at, String, null: false
     # field :created_at_part, Integer, null: true do
     #   argument :unit, Integer, required: false, default_value: 123
